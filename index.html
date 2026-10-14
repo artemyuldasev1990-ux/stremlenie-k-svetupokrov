@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#102b29">
 <title>ЖК Стремление к Свету — True IP</title>
 <style>
-:root{--bg:#f4f6f2;--ink:#17332f;--green:#235c50;--gold:#c7a76b}
+:root{--bg:#f4f6f2;--ink:#17332f;--gold:#c7a76b}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,sans-serif;line-height:1.6}
@@ -40,7 +40,7 @@ label{display:block;font-size:13px;font-weight:bold;margin:14px 0 6px}
 input,select,textarea{width:100%;padding:13px;border:1px solid #d4ddd5;border-radius:7px;font:inherit;background:#fff;color:#17332f}
 textarea{min-height:95px;resize:vertical}
 .messengers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:20px}
-.messengers button{padding:15px 8px;border-radius:8px;text-align:center;font-size:14px;font-weight:bold;border:0;cursor:pointer}
+.messengers a,.messengers button{display:flex;align-items:center;justify-content:center;padding:15px 8px;border-radius:8px;text-align:center;font-size:14px;font-weight:bold;border:0;cursor:pointer;text-decoration:none}
 .wa{background:#e2f5e8;color:#17633b}
 .tg{background:#e3f2fb;color:#14628b}
 .mx{background:#e8e6ff;color:#473e9c}
@@ -128,11 +128,11 @@ section{padding:43px 6%}
 
     <div class="messengers">
       <button class="wa" type="button" onclick="sendRequest('wa')">WhatsApp ↗</button>
-      <button class="tg" type="button" onclick="sendRequest('tg')">Telegram ↗</button>
+      <a class="tg" href="https://t.me/pokrovittemyc" target="_blank" rel="noopener">Telegram ↗</a>
       <button class="mx" type="button" onclick="sendRequest('mx')">MAX ↗</button>
       <button class="sms" type="button" onclick="sendRequest('sms')">SMS ✉</button>
     </div>
-    <p class="hint">Сообщение подготавливается автоматически. Проверьте его и нажмите «Отправить» в выбранном приложении. Для SMS и MAX может понадобиться вставить скопированный текст вручную.</p>
+    <p class="hint">Для WhatsApp и SMS текст заявки готовится автоматически. В Telegram и MAX при необходимости скопируйте данные из формы и отправьте их в чат.</p>
   </form>
 </section>
 </main>
@@ -166,30 +166,14 @@ function sendRequest(type){
 
   if(type==='wa'){
     window.location.href='https://wa.me/79771198417?text='+encoded;
-    return;
-  }
-
-  if(type==='sms'){
+  }else if(type==='sms'){
     window.location.href='sms:+79777175043?body='+encoded;
-    return;
-  }
-
-  if(type==='tg'){
-    copyMessage(message);
-    window.location.href='https://t.me/+79771198417';
-    return;
-  }
-
-  if(type==='mx'){
-    copyMessage(message);
+  }else if(type==='mx'){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(message).catch(function(){});
+    }
     window.location.href='https://max.ru/';
-    alert('Если текст заявки скопировался, вставьте его в чат с инженером в MAX и отправьте.');
-  }
-}
-
-function copyMessage(message){
-  if(navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(message).catch(function(){});
+    alert('Откройте чат с инженером в MAX и вставьте текст заявки.');
   }
 }
 </script>
