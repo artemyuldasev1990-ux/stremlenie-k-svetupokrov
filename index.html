@@ -3,323 +3,195 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#092c32">
-<title>Стремление к Свету — домофония и видеонаблюдение</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102b29">
+<title>ЖК Стремление к Свету — True IP</title>
 <style>
-:root {
-  --bg:#071e23;
-  --panel:#10343a;
-  --gold:#d8bb79;
-  --text:#f5f5ef;
-  --muted:#b8c9c8;
-}
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body {
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
-}
-a { color:inherit; text-decoration:none; }
-.container { width:min(1080px,92%); margin:auto; }
-header {
-  padding:22px 0;
-  border-bottom:1px solid #ffffff18;
-}
-.brand { color:var(--gold); font-weight:800; letter-spacing:1px; }
-header .container {
-  display:flex; align-items:center; justify-content:space-between; gap:15px;
-}
-.small { color:var(--muted); font-size:13px; }
-.hero { padding:68px 0 50px; }
-.eyebrow {
-  color:var(--gold); text-transform:uppercase;
-  letter-spacing:2px; font-size:12px; font-weight:bold;
-}
-h1 {
-  font-size:clamp(34px,7vw,62px);
-  line-height:1.08; margin:16px 0;
-  letter-spacing:-1.5px;
-}
-h2 { font-size:clamp(25px,4vw,36px); line-height:1.2; }
-h3 { margin:0 0 8px; }
-p { color:var(--muted); }
-.hero p { max-width:650px; font-size:17px; }
-.gold { color:var(--gold); }
-.actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:25px; }
-.btn {
-  display:inline-flex; align-items:center; justify-content:center;
-  border:0; border-radius:12px; padding:14px 19px;
-  font-size:15px; font-weight:700; cursor:pointer;
-  text-align:center; min-height:49px;
-}
-.btn-gold { background:var(--gold); color:#13272a; }
-.btn-outline { border:1px solid #ffffff45; color:var(--text); background:transparent; }
-section { padding:35px 0; }
-.grid {
-  display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px;
-}
-.card {
-  background:linear-gradient(145deg,#12383e,#0c292f);
-  border:1px solid #ffffff14; border-radius:18px; padding:23px;
-}
-.icon { font-size:25px; margin-bottom:10px; }
-.price {
-  color:var(--gold); font-size:27px; font-weight:800; margin:8px 0;
-}
-.form-wrap { max-width:720px; margin:auto; }
-form { display:grid; gap:14px; }
-label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
-input,select,textarea {
-  display:block; width:100%; border:1px solid #ffffff24;
-  background:#071f24; color:white; padding:14px;
-  border-radius:10px; font:inherit; outline:none;
-}
-input:focus,select:focus,textarea:focus { border-color:var(--gold); }
-textarea { min-height:95px; resize:vertical; }
-.field-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-.send-buttons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-top:5px; }
-.send-buttons .btn { padding:13px 8px; font-size:14px; }
-.wa { background:#1fae69; color:white; }
-.tg { background:#229ed9; color:white; }
-.max { background:#7162d9; color:white; }
-.notice {
-  background:#ffffff08; border:1px solid #ffffff15;
-  border-radius:12px; padding:14px; font-size:13px;
-}
-footer { border-top:1px solid #ffffff18; padding:25px 0 35px; margin-top:25px; }
-footer a { color:var(--gold); }
-@media(max-width:600px) {
-  .hero { padding-top:45px; }
-  .grid,.field-grid { grid-template-columns:1fr; }
-  .send-buttons { grid-template-columns:1fr; }
-  header .small { display:none; }
-  .card { padding:19px; }
+:root{--bg:#f4f6f2;--ink:#17332f;--green:#235c50;--gold:#c7a76b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,sans-serif;line-height:1.6}
+header{background:#102b29;color:#fff;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-size:18px;font-weight:800}
+.logo span{display:block;color:#d7bd89;font-size:11px;letter-spacing:2px}
+nav a{color:#fff;text-decoration:none;font-size:13px;margin-left:12px}
+.hero{background:linear-gradient(120deg,#102b29,#285b4d);color:#fff;padding:72px 7%}
+.eyebrow,.label{color:#c7a76b;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:bold}
+h1{font-size:clamp(35px,7vw,62px);line-height:1.08;margin:20px 0}
+.hero p{max-width:620px;color:#e0e9e4;font-size:17px}
+.btn{display:inline-block;background:#c7a76b;color:#172e29;padding:14px 22px;border-radius:7px;text-decoration:none;font-weight:bold;margin-top:14px}
+section{padding:55px 7%}
+h2{font-size:clamp(27px,4vw,38px);line-height:1.2;margin:10px 0 20px}
+.intro{max-width:720px;color:#596b62}
+.label{color:#8a7042}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.card{background:#fff;border:1px solid #e0e7e0;border-radius:14px;padding:23px}
+.symbol{font-size:25px;background:#e6eee7;width:44px;height:44px;display:grid;place-items:center;border-radius:12px}
+.card h3{font-size:18px;margin:14px 0 7px}
+.card p{color:#63716b;font-size:14px;margin:0}
+.banner{background:#e4ebe2;border-radius:16px;padding:30px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.step p{font-size:14px;color:#617068}
+.contact{background:#102b29;color:white}
+.contact .intro{color:#d3dfd8}
+.phone{font-size:clamp(24px,5vw,32px);font-weight:bold;color:#e0c58f;text-decoration:none}
+form{background:white;color:var(--ink);padding:24px;border-radius:15px;max-width:680px;margin-top:25px}
+label{display:block;font-size:13px;font-weight:bold;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:13px;border:1px solid #d4ddd5;border-radius:7px;font:inherit;background:#fff;color:#17332f}
+textarea{min-height:95px;resize:vertical}
+.messengers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:20px}
+.messengers button{padding:15px 8px;border-radius:8px;text-align:center;font-size:14px;font-weight:bold;border:0;cursor:pointer}
+.wa{background:#e2f5e8;color:#17633b}
+.tg{background:#e3f2fb;color:#14628b}
+.mx{background:#e8e6ff;color:#473e9c}
+.sms{background:#f4eadb;color:#76521d}
+.hint{font-size:12px;color:#6c7972;margin-top:13px}
+footer{background:#0a211f;color:#b8c7bf;padding:24px 7%;font-size:12px}
+footer a{color:#e0c58f}
+@media(max-width:700px){
+header{padding:16px 5%}
+nav a{font-size:12px;margin-left:8px}
+.hero{padding:55px 6%}
+section{padding:43px 6%}
+.grid,.steps{grid-template-columns:1fr}
+.messengers{grid-template-columns:1fr 1fr}
+.card{padding:20px}
 }
 </style>
 </head>
 <body>
 <header>
-  <div class="container">
-    <div class="brand">ПОД ПОКРОВОМ</div>
-    <div class="small">Инженерное обслуживание ЖК</div>
-  </div>
+  <div class="logo">СТРЕМЛЕНИЕ К СВЕТУ<span>СЕРВИС TRUE IP</span></div>
+  <nav><a href="#services">Услуги</a><a href="#request">Заявка</a></nav>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="container">
-      <div class="eyebrow">ЖК «Стремление к Свету»</div>
-      <h1>Ваш дом.<br><span class="gold">Под надёжной защитой.</span></h1>
-      <p>Домофония, видеонаблюдение и современные решения True IP. Восстановление, настройка и обслуживание систем жилого комплекса.</p>
-      <div class="actions">
-        <a class="btn btn-gold" href="#request">Оставить заявку</a>
-        <a class="btn btn-outline" href="tel:+79777175043">Позвонить инженеру</a>
-      </div>
+<section class="hero">
+  <div class="eyebrow">Безопасность и комфорт вашего дома</div>
+  <h1>Ваш дом.<br>Под надёжным покровом.</h1>
+  <p>Восстановление и обслуживание домофонии и видеонаблюдения True IP в ЖК «Стремление к Свету». Современные решения для жителей и жилого комплекса.</p>
+  <a class="btn" href="#request">Оставить заявку →</a>
+</section>
+
+<section id="services">
+  <div class="label">Наши направления</div>
+  <h2>Системы, которые работают как надо</h2>
+  <p class="intro">Помогаем восстановить оборудование, устранить неисправности и расширить возможности существующей системы.</p>
+  <div class="grid">
+    <article class="card"><div class="symbol">⌂</div><h3>Домофония</h3><p>Диагностика и восстановление домофонов, вызывных панелей и абонентских устройств.</p></article>
+    <article class="card"><div class="symbol">▣</div><h3>Видеонаблюдение</h3><p>Проверка камер, восстановление системы и помощь с доступом к видеонаблюдению.</p></article>
+    <article class="card"><div class="symbol">▤</div><h3>Доступ со смартфона</h3><p>Подключение совместимых устройств к T-NECT для домофонии и просмотра камер.</p></article>
+    <article class="card"><div class="symbol">⚙</div><h3>Восстановление систем</h3><p>Поиск неисправностей и восстановление после некачественной приёмки.</p></article>
+    <article class="card"><div class="symbol">⌁</div><h3>Обслуживание ЖК</h3><p>Техническое сопровождение, диагностика и поддержание оборудования в рабочем состоянии.</p></article>
+    <article class="card"><div class="symbol">＋</div><h3>Дополнительные решения</h3><p>Видеодомофоны, камеры и оборудование на этажах по индивидуальному запросу.</p></article>
+  </div>
+</section>
+
+<section>
+  <div class="banner">
+    <div class="label">Понятный порядок работы</div>
+    <h2>От обращения до результата</h2>
+    <div class="steps">
+      <div class="step"><strong>01. Заявка</strong><p>Укажите корпус, квартиру и опишите проблему.</p></div>
+      <div class="step"><strong>02. Диагностика</strong><p>Определим причину и согласуем необходимые работы.</p></div>
+      <div class="step"><strong>03. Решение</strong><p>Выполним согласованные работы и объясним результат.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="container">
-      <div class="eyebrow">Наши направления</div>
-      <h2>Системы, которые <span class="gold">работают как надо</span></h2>
-      <div class="grid">
-        <article class="card">
-          <div class="icon">⌁</div>
-          <h3>Домофония True IP</h3>
-          <p>Восстановление вызовов, настройка панелей и подключение смартфонов для дистанционного открытия двери.</p>
-        </article>
-        <article class="card">
-          <div class="icon">◉</div>
-          <h3>Видеонаблюдение</h3>
-          <p>Проверка камер и доступ к видеонаблюдению с поддерживаемых устройств.</p>
-        </article>
-        <article class="card">
-          <div class="icon">▣</div>
-          <h3>Приложение T-NECT</h3>
-          <p>Подключение мобильных устройств для использования домофонии и доступных камер в одном приложении.</p>
-        </article>
-        <article class="card">
-          <div class="icon">⚙</div>
-          <h3>Восстановление и модернизация</h3>
-          <p>Диагностика, устранение неисправностей, доработка и улучшение существующих систем.</p>
-        </article>
-      </div>
+<section class="contact" id="request">
+  <div class="label">Связь с инженером</div>
+  <h2>Есть вопрос или нужна помощь?</h2>
+  <p class="intro">Заполните заявку и выберите удобный способ отправки.</p>
+  <p><a class="phone" href="tel:+79777175043">+7 977 717-50-43</a></p>
+  <p>Инженер Артём · True IP</p>
+
+  <form id="requestForm">
+    <label for="name">Ваше имя</label>
+    <input id="name" name="name" placeholder="Как к вам обращаться">
+
+    <label for="apartment">Корпус и номер квартиры</label>
+    <input id="apartment" name="apartment" placeholder="Например, корпус 1, квартира 125" required>
+
+    <label for="service">Что вас интересует?</label>
+    <select id="service" name="service">
+      <option>Подключение смартфона к T-NECT</option>
+      <option>Не работает домофон</option>
+      <option>Проблема с видеонаблюдением</option>
+      <option>Обслуживание или ремонт</option>
+      <option>Дополнительное оборудование на этаже</option>
+      <option>Другой вопрос</option>
+    </select>
+
+    <label for="details">Описание проблемы</label>
+    <textarea id="details" name="details" placeholder="Что необходимо сделать?"></textarea>
+
+    <div class="messengers">
+      <button class="wa" type="button" onclick="sendRequest('wa')">WhatsApp ↗</button>
+      <button class="tg" type="button" onclick="sendRequest('tg')">Telegram ↗</button>
+      <button class="mx" type="button" onclick="sendRequest('mx')">MAX ↗</button>
+      <button class="sms" type="button" onclick="sendRequest('sms')">SMS ✉</button>
     </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="grid">
-        <div class="card">
-          <div class="eyebrow">Прозрачная стоимость</div>
-          <h2>Подключение смартфона</h2>
-          <div class="price">2 500 ₽</div>
-          <p>Разовое подключение первого устройства.</p>
-          <p><strong class="gold">+1 000 ₽</strong> за каждое дополнительное устройство.</p>
-          <p>Без ежемесячной платы за само подключение. Дополнительные работы согласовываются отдельно.</p>
-        </div>
-        <div class="card">
-          <div class="eyebrow">Инженерная поддержка</div>
-          <h2>Не просто подключить — <span class="gold">наладить</span></h2>
-          <p>Проверяем работу системы, помогаем разобраться с доступом и принимаем заявки на восстановление оборудования.</p>
-          <a class="btn btn-outline" href="tel:+79777175043">+7 977 717-50-43</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="request">
-    <div class="container form-wrap">
-      <div class="eyebrow">Связь с инженером</div>
-      <h2>Оставить <span class="gold">заявку</span></h2>
-      <p>Заполните форму и выберите, куда отправить сообщение.</p>
-
-      <form id="requestForm">
-        <div class="field-grid">
-          <div>
-            <label for="building">Корпус / секция</label>
-            <select id="building" required>
-              <option value="">Выберите корпус</option>
-              <option>1ВК1</option>
-              <option>1ВК2</option>
-              <option>1ВК3</option>
-              <option>Другой корпус</option>
-            </select>
-          </div>
-          <div>
-            <label for="apartment">Номер квартиры</label>
-            <input id="apartment" placeholder="Например, 215" required>
-          </div>
-        </div>
-
-        <div class="field-grid">
-          <div>
-            <label for="devices">Количество устройств</label>
-            <select id="devices" required>
-              <option value="1">1 устройство</option>
-              <option value="2">2 устройства</option>
-              <option value="3">3 устройства</option>
-              <option value="4">4 устройства</option>
-              <option value="5">5 устройств</option>
-            </select>
-          </div>
-          <div>
-            <label for="name">Ваше имя</label>
-            <input id="name" placeholder="Как к вам обращаться" required>
-          </div>
-        </div>
-
-        <div>
-          <label for="phone">Ваш номер телефона</label>
-          <input id="phone" type="tel" placeholder="+7 ___ ___-__-__" required>
-        </div>
-
-        <div>
-          <label for="comment">Комментарий (необязательно)</label>
-          <textarea id="comment" placeholder="Например, нужно подключить два телефона"></textarea>
-        </div>
-
-        <div class="notice" id="priceInfo">Стоимость подключения будет рассчитана автоматически.</div>
-
-        <div>
-          <label>Выберите способ отправки заявки</label>
-          <div class="send-buttons">
-            <button class="btn wa" type="button" id="sendWhatsApp">WhatsApp ↗</button>
-            <button class="btn max" type="button" id="sendMax">MAX ↗</button>
-            <button class="btn tg" type="button" id="sendTelegram">Telegram ↗</button>
-          </div>
-        </div>
-        <div class="small">При отправке откроется выбранный мессенджер. Проверьте текст и нажмите «Отправить» в самом приложении.</div>
-      </form>
-    </div>
-  </section>
+    <p class="hint">Сообщение подготавливается автоматически. Проверьте его и нажмите «Отправить» в выбранном приложении. Для SMS и MAX может понадобиться вставить скопированный текст вручную.</p>
+  </form>
+</section>
 </main>
 
 <footer>
-  <div class="container">
-    <div class="brand">ПОД ПОКРОВОМ</div>
-    <p>ЖК «Стремление к Свету» · Домофония · Видеонаблюдение · True IP</p>
-    <p>Инженер Артём: <a href="tel:+79777175043">+7 977 717-50-43</a></p>
-    <p class="small">Подключение и обслуживание систем жилого комплекса.</p>
-  </div>
+  <p><strong>ЖК «Стремление к Свету»</strong> · Обслуживание систем True IP</p>
+  <p>Инженер Артём · <a href="tel:+79777175043">+7 977 717-50-43</a></p>
+  <p>Под покровом — технологии для вашего спокойствия.</p>
 </footer>
 
 <script>
-const $ = id => document.getElementById(id);
+function sendRequest(type){
+  const name=document.getElementById('name').value.trim();
+  const apartment=document.getElementById('apartment').value.trim();
+  const service=document.getElementById('service').value;
+  const details=document.getElementById('details').value.trim();
 
-function getRequestMessage() {
-  const building = $('building').value;
-  const apartment = $('apartment').value.trim();
-  const devices = Number($('devices').value);
-  const name = $('name').value.trim();
-  const phone = $('phone').value.trim();
-  const comment = $('comment').value.trim();
-
-  if (!building || !apartment || !name || !phone) {
-    alert('Заполните корпус, квартиру, имя и номер телефона.');
-    return null;
+  if(!apartment){
+    alert('Пожалуйста, укажите корпус и номер квартиры.');
+    document.getElementById('apartment').focus();
+    return;
   }
 
-  const total = 2500 + Math.max(0, devices - 1) * 1000;
+  const message='Заявка с сайта ЖК «Стремление к Свету»\n'
+    +'Имя: '+(name||'Не указано')+'\n'
+    +'Корпус и квартира: '+apartment+'\n'
+    +'Услуга: '+service+'\n'
+    +'Описание: '+(details||'Не указано');
 
-  return [
-    'ЗАЯВКА С САЙТА ЖК «СТРЕМЛЕНИЕ К СВЕТУ»',
-    '',
-    'Корпус: ' + building,
-    'Квартира: ' + apartment,
-    'Устройств: ' + devices,
-    'Имя: ' + name,
-    'Телефон: ' + phone,
-    'Расчётная стоимость подключения: ' + total + ' ₽',
-    'Комментарий: ' + (comment || 'не указан'),
-    '',
-    'Прошу связаться со мной по заявке.'
-  ].join('\n');
-}
+  const encoded=encodeURIComponent(message);
 
-function updatePrice() {
-  const devices = Number($('devices').value);
-  const total = 2500 + Math.max(0, devices - 1) * 1000;
-  $('priceInfo').textContent =
-    'Расчётная стоимость подключения: ' + total.toLocaleString('ru-RU') +
-    ' ₽. Первый прибор — 2 500 ₽, каждый дополнительный — 1 000 ₽.';
-}
-$('devices').addEventListener('change', updatePrice);
-updatePrice();
-
-$('sendWhatsApp').addEventListener('click', () => {
-  const message = getRequestMessage();
-  if (!message) return;
-  const url = 'https://wa.me/79771198417?text=' + encodeURIComponent(message);
-  window.open(url, '_blank');
-});
-
-$('sendTelegram').addEventListener('click', () => {
-  const message = getRequestMessage();
-  if (!message) return;
-  const url = 'https://t.me/share/url?url=' +
-    encodeURIComponent('https://artemyuldasev1990-ux.github.io/stremlenie-k-svetupokrov/') +
-    '&text=' + encodeURIComponent(message);
-  window.open(url, '_blank');
-});
-
-$('sendMax').addEventListener('click', async () => {
-  const message = getRequestMessage();
-  if (!message) return;
-
-  try {
-    await navigator.clipboard.writeText(message);
-    alert('Текст заявки скопирован. Вставьте его в чат MAX и отправьте.');
-  } catch (e) {
-    prompt('Скопируйте текст заявки и отправьте его в MAX:', message);
+  if(type==='wa'){
+    window.location.href='https://wa.me/79771198417?text='+encoded;
+    return;
   }
 
-  window.open('https://max.ru/', '_blank');
-});
+  if(type==='sms'){
+    window.location.href='sms:+79777175043?body='+encoded;
+    return;
+  }
+
+  if(type==='tg'){
+    copyMessage(message);
+    window.location.href='https://t.me/+79771198417';
+    return;
+  }
+
+  if(type==='mx'){
+    copyMessage(message);
+    window.location.href='https://max.ru/';
+    alert('Если текст заявки скопировался, вставьте его в чат с инженером в MAX и отправьте.');
+  }
+}
+
+function copyMessage(message){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(message).catch(function(){});
+  }
+}
 </script>
 </body>
 </html>
