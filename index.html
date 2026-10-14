@@ -1,181 +1,132 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#102b29">
-<title>ЖК Стремление к Свету — True IP</title>
+<meta name="theme-color" content="#101b20">
+<meta name="description" content="Обслуживание, восстановление и модернизация домофонии, видеонаблюдения и СКУД в жилых комплексах. True IP.">
+<title>Под покровом — инженерные системы ЖК</title>
 <style>
-:root{--bg:#f4f6f2;--ink:#17332f;--gold:#c7a76b}
+:root{--bg:#0d171b;--panel:#142329;--gold:#d8bd83;--gold2:#f1dfb5;--white:#f7f5ef;--muted:#c1c9c8;--line:rgba(232,215,177,.22)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,sans-serif;line-height:1.6}
-header{background:#102b29;color:#fff;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.logo{font-size:18px;font-weight:800}
-.logo span{display:block;color:#d7bd89;font-size:11px;letter-spacing:2px}
-nav a{color:#fff;text-decoration:none;font-size:13px;margin-left:12px}
-.hero{background:linear-gradient(120deg,#102b29,#285b4d);color:#fff;padding:72px 7%}
-.eyebrow,.label{color:#c7a76b;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:bold}
-h1{font-size:clamp(35px,7vw,62px);line-height:1.08;margin:20px 0}
-.hero p{max-width:620px;color:#e0e9e4;font-size:17px}
-.btn{display:inline-block;background:#c7a76b;color:#172e29;padding:14px 22px;border-radius:7px;text-decoration:none;font-weight:bold;margin-top:14px}
-section{padding:55px 7%}
-h2{font-size:clamp(27px,4vw,38px);line-height:1.2;margin:10px 0 20px}
-.intro{max-width:720px;color:#596b62}
-.label{color:#8a7042}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
-.card{background:#fff;border:1px solid #e0e7e0;border-radius:14px;padding:23px}
-.symbol{font-size:25px;background:#e6eee7;width:44px;height:44px;display:grid;place-items:center;border-radius:12px}
-.card h3{font-size:18px;margin:14px 0 7px}
-.card p{color:#63716b;font-size:14px;margin:0}
-.banner{background:#e4ebe2;border-radius:16px;padding:30px}
-.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.step p{font-size:14px;color:#617068}
-.contact{background:#102b29;color:white}
-.contact .intro{color:#d3dfd8}
-.phone{font-size:clamp(24px,5vw,32px);font-weight:bold;color:#e0c58f;text-decoration:none}
-form{background:white;color:var(--ink);padding:24px;border-radius:15px;max-width:680px;margin-top:25px}
-label{display:block;font-size:13px;font-weight:bold;margin:14px 0 6px}
-input,select,textarea{width:100%;padding:13px;border:1px solid #d4ddd5;border-radius:7px;font:inherit;background:#fff;color:#17332f}
-textarea{min-height:95px;resize:vertical}
-.messengers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:20px}
-.messengers a,.messengers button{display:flex;align-items:center;justify-content:center;padding:15px 8px;border-radius:8px;text-align:center;font-size:14px;font-weight:bold;border:0;cursor:pointer;text-decoration:none}
-.wa{background:#e2f5e8;color:#17633b}
-.tg{background:#e3f2fb;color:#14628b}
-.mx{background:#e8e6ff;color:#473e9c}
-.sms{background:#f4eadb;color:#76521d}
-.hint{font-size:12px;color:#6c7972;margin-top:13px}
-footer{background:#0a211f;color:#b8c7bf;padding:24px 7%;font-size:12px}
-footer a{color:#e0c58f}
-@media(max-width:700px){
-header{padding:16px 5%}
-nav a{font-size:12px;margin-left:8px}
-.hero{padding:55px 6%}
-section{padding:43px 6%}
-.grid,.steps{grid-template-columns:1fr}
-.messengers{grid-template-columns:1fr 1fr}
-.card{padding:20px}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(8,17,21,.94),rgba(8,17,21,.78) 48%,rgba(8,17,21,.35)),linear-gradient(0deg,rgba(8,17,21,.78),transparent 45%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=85') center/cover no-repeat}
+.hero:after{content:"";position:absolute;inset:18px;border:1px solid rgba(232,215,177,.2);pointer-events:none}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+.nav{position:absolute;z-index:2;top:0;left:0;right:0;padding:25px 0;border-bottom:1px solid rgba(255,255,255,.13)}
+.navinner{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);font-weight:700}
+.navnote{font-size:13px;color:#e3e4df;letter-spacing:.06em}
+.hero-content{position:relative;z-index:1;padding:140px 0 90px;max-width:780px}
+.eyebrow,.section-kicker{color:var(--gold2);text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:700;margin-bottom:18px}
+.hero h1{font-size:clamp(42px,7vw,78px);line-height:1.04;letter-spacing:-.045em;font-weight:500;margin:0 0 25px}
+.hero h1 span{color:var(--gold2)}
+.lead{font-size:clamp(17px,2.2vw,21px);color:#e1e5e2;max-width:660px;margin:0 0 32px}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 23px;border:1px solid var(--gold);font-weight:650;font-size:14px;transition:.2s}
+.btn.primary{background:var(--gold);color:#142025}
+.btn:hover{transform:translateY(-2px);background:var(--gold2);color:#142025}
+.btn.secondary{background:rgba(7,16,19,.35);color:var(--white)}
+.micro{font-size:12px;color:#cbd1ce;margin-top:22px}
+section{padding:86px 0}
+.section-title{font-size:clamp(30px,4.4vw,48px);line-height:1.12;font-weight:500;letter-spacing:-.03em;margin:0 0 18px}
+.intro{max-width:700px;color:var(--muted);font-size:17px;margin:0}
+.services{background:#101d22}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:38px}
+.card{padding:28px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.008));min-height:185px}
+.num{color:var(--gold);font-size:12px;letter-spacing:.15em}
+.card h3{font-size:21px;font-weight:550;margin:12px 0 9px}
+.card p{color:var(--muted);font-size:15px;margin:0}
+.approach-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:54px;align-items:start}
+.points{display:grid;gap:0}
+.point{padding:20px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:38px 1fr;gap:14px}
+.point:first-child{border-top:1px solid var(--line)}
+.point b{color:var(--gold2);font-size:14px}
+.point h3{margin:0 0 5px;font-size:18px;font-weight:550}
+.point p{margin:0;color:var(--muted);font-size:15px}
+.trust{background:#142329}
+.trustbox{border:1px solid var(--line);padding:34px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.trustbox h2{font-size:clamp(27px,4vw,42px);line-height:1.15;font-weight:500;margin:0 0 10px}
+.trustbox p{color:var(--muted);margin:0;max-width:650px}
+.tag{border:1px solid var(--gold);color:var(--gold2);padding:12px 16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.contact{background:linear-gradient(130deg,#0c171b,#17282d)}
+.contact-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.contact h2{font-size:clamp(32px,5vw,54px);line-height:1.08;font-weight:500;letter-spacing:-.03em;margin:0 0 15px}
+.contact p{color:var(--muted);margin:0;max-width:620px}
+.contact-actions{display:flex;flex-direction:column;gap:12px;min-width:230px}
+.phone{font-size:20px;color:var(--gold2);font-weight:600;margin-top:20px;display:inline-block}
+footer{padding:25px 0;border-top:1px solid var(--line);font-size:12px;color:#9eaaa9}
+.footerinner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.fine{margin-top:12px;color:#84918f;font-size:11px}
+@media(max-width:720px){
+.hero{min-height:88vh;background-position:58% center}
+.nav{padding:19px 0}
+.navnote{display:none}
+.hero-content{padding:125px 0 70px}
+.hero h1{font-size:clamp(41px,12vw,60px)}
+section{padding:64px 0}
+.cards{grid-template-columns:1fr}
+.approach-grid{grid-template-columns:1fr;gap:26px}
+.trustbox,.contact-inner{align-items:flex-start;flex-direction:column}
+.trustbox{padding:25px}
+.contact-actions{width:100%}
+.btn{width:100%}
+.wrap{width:min(100% - 32px,1120px)}
+.hero:after{inset:9px}
 }
 </style>
 </head>
 <body>
-<header>
-  <div class="logo">СТРЕМЛЕНИЕ К СВЕТУ<span>СЕРВИС TRUE IP</span></div>
-  <nav><a href="#services">Услуги</a><a href="#request">Заявка</a></nav>
+<header class="hero" id="top">
+<nav class="nav"><div class="wrap navinner">
+<a class="brand" href="#top">Под покровом</a>
+<div class="navnote">Инженерные системы жилых комплексов</div>
+</div></nav>
+<div class="wrap"><div class="hero-content">
+<div class="eyebrow">Домофония · Видеонаблюдение · СКУД</div>
+<h1>Ваш жилой комплекс<br><span>под надёжной защитой</span></h1>
+<p class="lead">Восстанавливаем, обслуживаем и модернизируем системы доступа и видеонаблюдения. Берёмся за сложные объекты и доводим оборудование до стабильной работы.</p>
+<div class="actions">
+<a class="btn primary" href="https://wa.me/79777175043" target="_blank" rel="noopener">Написать в WhatsApp</a>
+<a class="btn secondary" href="sms:+79777175043">Отправить SMS</a>
+<a class="btn secondary" href="#services">Наши услуги</a>
+</div>
+<div class="micro">Инженерный подход · Практический опыт · Ответственность за результат</div>
+</div></div>
 </header>
-
 <main>
-<section class="hero">
-  <div class="eyebrow">Безопасность и комфорт вашего дома</div>
-  <h1>Ваш дом.<br>Под надёжным покровом.</h1>
-  <p>Восстановление и обслуживание домофонии и видеонаблюдения True IP в ЖК «Стремление к Свету». Современные решения для жителей и жилого комплекса.</p>
-  <a class="btn" href="#request">Оставить заявку →</a>
-</section>
-
-<section id="services">
-  <div class="label">Наши направления</div>
-  <h2>Системы, которые работают как надо</h2>
-  <p class="intro">Помогаем восстановить оборудование, устранить неисправности и расширить возможности существующей системы.</p>
-  <div class="grid">
-    <article class="card"><div class="symbol">⌂</div><h3>Домофония</h3><p>Диагностика и восстановление домофонов, вызывных панелей и абонентских устройств.</p></article>
-    <article class="card"><div class="symbol">▣</div><h3>Видеонаблюдение</h3><p>Проверка камер, восстановление системы и помощь с доступом к видеонаблюдению.</p></article>
-    <article class="card"><div class="symbol">▤</div><h3>Доступ со смартфона</h3><p>Подключение совместимых устройств к T-NECT для домофонии и просмотра камер.</p></article>
-    <article class="card"><div class="symbol">⚙</div><h3>Восстановление систем</h3><p>Поиск неисправностей и восстановление после некачественной приёмки.</p></article>
-    <article class="card"><div class="symbol">⌁</div><h3>Обслуживание ЖК</h3><p>Техническое сопровождение, диагностика и поддержание оборудования в рабочем состоянии.</p></article>
-    <article class="card"><div class="symbol">＋</div><h3>Дополнительные решения</h3><p>Видеодомофоны, камеры и оборудование на этажах по индивидуальному запросу.</p></article>
-  </div>
-</section>
-
-<section>
-  <div class="banner">
-    <div class="label">Понятный порядок работы</div>
-    <h2>От обращения до результата</h2>
-    <div class="steps">
-      <div class="step"><strong>01. Заявка</strong><p>Укажите корпус, квартиру и опишите проблему.</p></div>
-      <div class="step"><strong>02. Диагностика</strong><p>Определим причину и согласуем необходимые работы.</p></div>
-      <div class="step"><strong>03. Решение</strong><p>Выполним согласованные работы и объясним результат.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="request">
-  <div class="label">Связь с инженером</div>
-  <h2>Есть вопрос или нужна помощь?</h2>
-  <p class="intro">Заполните заявку и выберите удобный способ отправки.</p>
-  <p><a class="phone" href="tel:+79777175043">+7 977 717-50-43</a></p>
-  <p>Инженер Артём · True IP</p>
-
-  <form id="requestForm">
-    <label for="name">Ваше имя</label>
-    <input id="name" name="name" placeholder="Как к вам обращаться">
-
-    <label for="apartment">Корпус и номер квартиры</label>
-    <input id="apartment" name="apartment" placeholder="Например, корпус 1, квартира 125" required>
-
-    <label for="service">Что вас интересует?</label>
-    <select id="service" name="service">
-      <option>Подключение смартфона к T-NECT</option>
-      <option>Не работает домофон</option>
-      <option>Проблема с видеонаблюдением</option>
-      <option>Обслуживание или ремонт</option>
-      <option>Дополнительное оборудование на этаже</option>
-      <option>Другой вопрос</option>
-    </select>
-
-    <label for="details">Описание проблемы</label>
-    <textarea id="details" name="details" placeholder="Что необходимо сделать?"></textarea>
-
-    <div class="messengers">
-      <button class="wa" type="button" onclick="sendRequest('wa')">WhatsApp ↗</button>
-      <a class="tg" href="https://t.me/pokrovittemyc" target="_blank" rel="noopener">Telegram ↗</a>
-      <button class="mx" type="button" onclick="sendRequest('mx')">MAX ↗</button>
-      <button class="sms" type="button" onclick="sendRequest('sms')">SMS ✉</button>
-    </div>
-    <p class="hint">Для WhatsApp и SMS текст заявки готовится автоматически. В Telegram и MAX при необходимости скопируйте данные из формы и отправьте их в чат.</p>
-  </form>
-</section>
+<section class="services" id="services"><div class="wrap">
+<div class="section-kicker">Что мы делаем</div>
+<h2 class="section-title">Системы, которые работают<br>каждый день</h2>
+<p class="intro">Профессиональное обслуживание и восстановление с учётом реального состояния оборудования, особенностей объекта и задач жителей.</p>
+<div class="cards">
+<article class="card"><div class="num">01 / ДОСТУП</div><h3>Домофония и видеодомофония</h3><p>Диагностика, восстановление вызовов, настройка панелей и подключение смартфонов для удобного доступа.</p></article>
+<article class="card"><div class="num">02 / БЕЗОПАСНОСТЬ</div><h3>Видеонаблюдение</h3><p>Проверка камер и оборудования, восстановление изображения, настройка доступа к просмотру.</p></article>
+<article class="card"><div class="num">03 / КОНТРОЛЬ</div><h3>СКУД</h3><p>Обслуживание систем контроля и управления доступом, поиск неисправностей и настройка оборудования.</p></article>
+<article class="card"><div class="num">04 / РАЗВИТИЕ</div><h3>Модернизация систем ЖК</h3><p>Доработка существующей инфраструктуры, дополнительные функции и решения для отдельных подъездов и этажей.</p></article>
+</div></div></section>
+<section><div class="wrap approach-grid">
+<div><div class="section-kicker">Наш подход</div><h2 class="section-title">Не просто обслуживаем.<br>Возвращаем системе порядок.</h2><p class="intro">Особенно там, где после некачественной приёмки остались недоделки, нестабильная работа или непонятные неисправности.</p></div>
+<div class="points">
+<div class="point"><b>01</b><div><h3>Сначала диагностика</h3><p>Определяем состояние системы и причины неисправностей до начала восстановительных работ.</p></div></div>
+<div class="point"><b>02</b><div><h3>Понятный план действий</h3><p>Объясняем, что требуется сделать, какие узлы нуждаются в ремонте и что можно улучшить.</p></div></div>
+<div class="point"><b>03</b><div><h3>Восстановление и развитие</h3><p>Исправляем проблемы, завершаем недоделанные работы и внедряем согласованные дополнительные функции.</p></div></div>
+<div class="point"><b>04</b><div><h3>Обслуживание с ответственностью</h3><p>Помогаем поддерживать оборудование в стабильном и исправном состоянии.</p></div></div>
+</div></div></section>
+<section class="trust"><div class="wrap"><div class="trustbox">
+<div><div class="section-kicker">Технологии True IP</div><h2>Современная инфраструктура<br>для вашего жилого комплекса</h2><p>Работаем с системами True IP: настройка, обслуживание, восстановление и расширение функциональности объекта. Возможность каждого решения оценивается после проверки оборудования.</p></div>
+<div class="tag">Инженерный опыт 14+ лет</div>
+</div></div></section>
+<section class="contact" id="contact"><div class="wrap contact-inner">
+<div><div class="section-kicker">Связаться с инженером</div><h2>Обсудим вашу задачу</h2><p>Опишите проблему или расскажите, что нужно улучшить в вашем жилом комплексе. Подскажем, с чего начать и какие данные понадобятся для диагностики.</p><a class="phone" href="tel:+79777175043">+7 977 717-50-43</a><p style="font-size:13px;margin-top:4px">Артём · инженер по слаботочным системам</p></div>
+<div class="contact-actions">
+<a class="btn primary" href="https://wa.me/79777175043" target="_blank" rel="noopener">Написать в WhatsApp</a>
+<a class="btn secondary" href="sms:+79777175043">Отправить SMS</a>
+</div></div></section>
 </main>
-
-<footer>
-  <p><strong>ЖК «Стремление к Свету»</strong> · Обслуживание систем True IP</p>
-  <p>Инженер Артём · <a href="tel:+79777175043">+7 977 717-50-43</a></p>
-  <p>Под покровом — технологии для вашего спокойствия.</p>
-</footer>
-
-<script>
-function sendRequest(type){
-  const name=document.getElementById('name').value.trim();
-  const apartment=document.getElementById('apartment').value.trim();
-  const service=document.getElementById('service').value;
-  const details=document.getElementById('details').value.trim();
-
-  if(!apartment){
-    alert('Пожалуйста, укажите корпус и номер квартиры.');
-    document.getElementById('apartment').focus();
-    return;
-  }
-
-  const message='Заявка с сайта ЖК «Стремление к Свету»\n'
-    +'Имя: '+(name||'Не указано')+'\n'
-    +'Корпус и квартира: '+apartment+'\n'
-    +'Услуга: '+service+'\n'
-    +'Описание: '+(details||'Не указано');
-
-  const encoded=encodeURIComponent(message);
-
-  if(type==='wa'){
-    window.location.href='https://wa.me/79771198417?text='+encoded;
-  }else if(type==='sms'){
-    window.location.href='sms:+79777175043?body='+encoded;
-  }else if(type==='mx'){
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(message).catch(function(){});
-    }
-    window.location.href='https://max.ru/';
-    alert('Откройте чат с инженером в MAX и вставьте текст заявки.');
-  }
-}
-</script>
+<footer><div class="wrap"><div class="footerinner"><span>© Под покровом · Инженерные системы ЖК</span><span>Домофония · Видеонаблюдение · СКУД</span></div><div class="fine">Состав и сроки работ определяются после уточнения задачи и диагностики объекта.</div></div></footer>
 </body>
 </html>
