@@ -8,189 +8,113 @@
 <title>ЖК «Стремление к Свету» — Под покровом</title>
 <style>
 :root {
-  --bg: #102a29;
-  --panel: rgba(17, 43, 40, .91);
-  --gold: #d6bd8a;
-  --text: #f7f4ed;
-  --muted: #c5d0c9;
-  --line: rgba(214,189,138,.32);
+  --bg:#102a29;
+  --panel:rgba(17,43,40,.91);
+  --gold:#d6bd8a;
+  --text:#f7f4ed;
+  --muted:#c5d0c9;
+  --line:rgba(214,189,138,.32);
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  color: var(--text);
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  color:var(--text);
   background:
-    linear-gradient(135deg, rgba(8,25,25,.83), rgba(13,42,39,.94)),
+    linear-gradient(135deg,rgba(8,25,25,.83),rgba(13,42,39,.94)),
     url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85")
-    center / cover fixed;
-  line-height: 1.6;
+    center/cover fixed;
+  line-height:1.6;
 }
-a { color: inherit; }
-.wrap { width: min(1050px, 92%); margin: auto; }
-header {
-  padding: 23px 0;
-  border-bottom: 1px solid var(--line);
+a{color:inherit}
+.wrap{width:min(1050px,92%);margin:auto}
+header{padding:23px 0;border-bottom:1px solid var(--line)}
+.top{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:15px;flex-wrap:wrap
 }
-.top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
+.brand{
+  color:var(--gold);font-size:13px;letter-spacing:3px;
+  text-transform:uppercase
 }
-.brand {
-  color: var(--gold);
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+.phone{text-decoration:none;font-weight:700;font-size:17px}
+.hero{padding:66px 0 48px}
+.eyebrow{
+  color:var(--gold);text-transform:uppercase;
+  letter-spacing:3px;font-size:12px
 }
-.phone {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 17px;
+h1{
+  max-width:760px;margin:12px 0;
+  font-size:clamp(35px,7vw,65px);
+  line-height:1.08;font-weight:600;letter-spacing:-1.5px
 }
-.hero { padding: 66px 0 48px; }
-.eyebrow {
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
+h1 span{color:var(--gold)}
+.intro{max-width:670px;color:var(--muted);font-size:17px}
+.section{padding:22px 0 44px}
+h2{font-size:clamp(25px,4vw,35px);line-height:1.2;margin:0 0 12px}
+.subtitle{color:var(--muted);margin:0 0 25px}
+.grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px
 }
-h1 {
-  max-width: 760px;
-  margin: 12px 0;
-  font-size: clamp(35px, 7vw, 65px);
-  line-height: 1.08;
-  font-weight: 600;
-  letter-spacing: -1.5px;
+.card{
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:19px;padding:24px;backdrop-filter:blur(12px);
+  box-shadow:0 12px 36px rgba(0,0,0,.13)
 }
-h1 span { color: var(--gold); }
-.intro {
-  max-width: 670px;
-  color: var(--muted);
-  font-size: 17px;
+.card h3{margin:0 0 9px;font-size:20px}
+.card p{color:var(--muted);margin:0}
+form{display:grid;gap:19px}
+.field{display:grid;gap:8px}
+label,.label{font-size:14px;font-weight:600}
+input,select,textarea{
+  width:100%;min-height:49px;padding:13px 14px;
+  color:var(--text);background:rgba(255,255,255,.055);
+  border:1px solid rgba(214,189,138,.34);
+  border-radius:10px;font:inherit
 }
-.section { padding: 22px 0 44px; }
-h2 {
-  font-size: clamp(25px, 4vw, 35px);
-  line-height: 1.2;
-  margin: 0 0 12px;
+select option{color:#102a29;background:white}
+textarea{min-height:95px;resize:vertical}
+input::placeholder,textarea::placeholder{color:#aab8b1}
+.choice-list{display:grid;gap:10px}
+.choice{
+  display:flex;align-items:flex-start;gap:11px;
+  border:1px solid rgba(214,189,138,.25);
+  border-radius:11px;padding:13px;cursor:pointer;font-weight:400
 }
-.subtitle { color: var(--muted); margin: 0 0 25px; }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 17px;
+.choice input{
+  width:18px;min-height:18px;height:18px;
+  margin:4px 0 0;flex-shrink:0;accent-color:var(--gold)
 }
-.card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 19px;
-  padding: 24px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 12px 36px rgba(0,0,0,.13);
+.choice span{display:block}
+.choice small{color:var(--muted);display:block;margin-top:3px}
+.divider{height:1px;background:var(--line);margin:2px 0}
+.payment{
+  border-top:1px solid var(--line);padding-top:17px;
+  color:var(--muted);font-size:14px
 }
-.card h3 { margin: 0 0 9px; font-size: 20px; }
-.card p { color: var(--muted); margin: 0; }
-.price {
-  color: var(--gold);
-  font-size: 31px;
-  font-weight: 700;
-  margin-top: 12px;
+.payment strong{color:var(--gold)}
+.btn{
+  display:inline-flex;justify-content:center;align-items:center;
+  gap:8px;width:100%;padding:15px 18px;border:0;
+  border-radius:11px;background:var(--gold);color:#172b27;
+  font-weight:800;font-size:16px;text-decoration:none;cursor:pointer;
+  transition:transform .2s,filter .2s
 }
-form { display: grid; gap: 19px; }
-.field { display: grid; gap: 8px; }
-label, .label {
-  font-size: 14px;
-  font-weight: 600;
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--line)}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+footer{
+  margin-top:22px;padding:28px 0 35px;
+  border-top:1px solid var(--line);color:var(--muted);font-size:13px
 }
-input, select, textarea {
-  width: 100%;
-  min-height: 49px;
-  padding: 13px 14px;
-  color: var(--text);
-  background: rgba(255,255,255,.055);
-  border: 1px solid rgba(214,189,138,.34);
-  border-radius: 10px;
-  font: inherit;
-}
-select option { color: #102a29; background: white; }
-textarea { min-height: 95px; resize: vertical; }
-input::placeholder, textarea::placeholder { color: #aab8b1; }
-.choice-list { display: grid; gap: 10px; }
-.choice {
-  display: flex;
-  align-items: flex-start;
-  gap: 11px;
-  border: 1px solid rgba(214,189,138,.25);
-  border-radius: 11px;
-  padding: 13px;
-  cursor: pointer;
-  font-weight: 400;
-}
-.choice input {
-  width: 18px;
-  min-height: 18px;
-  height: 18px;
-  margin: 4px 0 0;
-  flex-shrink: 0;
-  accent-color: var(--gold);
-}
-.choice span { display: block; }
-.choice small { color: var(--muted); display: block; margin-top: 3px; }
-.divider { height: 1px; background: var(--line); margin: 2px 0; }
-.payment {
-  border-top: 1px solid var(--line);
-  padding-top: 17px;
-  color: var(--muted);
-  font-size: 14px;
-}
-.payment strong { color: var(--gold); }
-.btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  padding: 15px 18px;
-  border: 0;
-  border-radius: 11px;
-  background: var(--gold);
-  color: #172b27;
-  font-weight: 800;
-  font-size: 16px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform .2s, filter .2s;
-}
-.btn:hover { transform: translateY(-2px); filter: brightness(1.06); }
-.btn-outline {
-  background: transparent;
-  color: var(--text);
-  border: 1px solid var(--line);
-}
-.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-footer {
-  margin-top: 22px;
-  padding: 28px 0 35px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 13px;
-}
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-.gold { color: var(--gold); }
-@media (max-width: 650px) {
-  .grid, .actions { grid-template-columns: 1fr; }
-  .hero { padding-top: 48px; }
-  .card { padding: 20px; }
-  .phone { font-size: 15px; }
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.gold{color:var(--gold)}
+@media(max-width:650px){
+  .grid,.actions{grid-template-columns:1fr}
+  .hero{padding-top:48px}
+  .card{padding:20px}
+  .phone{font-size:15px}
 }
 </style>
 </head>
@@ -223,15 +147,12 @@ footer {
         Проверка подключения и работоспособности устройства,
         настройка и проверка связи с вызывной панелью.
       </p>
-      <div class="price">2 500 ₽</div>
     </div>
   </section>
 
   <section class="section">
     <h2>Дополнительные услуги</h2>
-    <p class="subtitle">
-      Решения для повышения безопасности и удобства на вашем этаже.
-    </p>
+    <p class="subtitle">Решения для повышения безопасности и удобства на вашем этаже.</p>
     <div class="grid">
       <article class="card">
         <h3>Безопасность этажа</h3>
@@ -256,9 +177,7 @@ footer {
 
   <section class="section" id="request">
     <h2>Заявка на обслуживание</h2>
-    <p class="subtitle">
-      Заполните форму — подготовим сообщение для отправки специалисту.
-    </p>
+    <p class="subtitle">Заполните форму — подготовим сообщение для отправки специалисту.</p>
 
     <div class="card">
       <form id="requestForm">
@@ -336,12 +255,15 @@ footer {
             placeholder="Опишите проблему или пожелания"></textarea>
         </div>
 
-        <button class="btn" type="submit">Подготовить заявку</button>
-
-        <div class="actions">
-          <a class="btn btn-outline" href="tel:+79777175043">Позвонить специалисту</a>
-          <a class="btn btn-outline" href="https://wa.me/79771198417" target="_blank" rel="noopener">WhatsApp</a>
+        <div class="field">
+          <label for="sendMethod">Как отправить заявку?</label>
+          <select id="sendMethod" name="sendMethod">
+            <option value="sms">SMS</option>
+            <option value="whatsapp">WhatsApp</option>
+          </select>
         </div>
+
+        <button class="btn" type="submit">Отправить заявку</button>
 
         <div class="payment">
           <strong>Стоимость и оплата.</strong>
@@ -373,7 +295,8 @@ document.getElementById('requestForm').addEventListener('submit', function(e) {
 
   const form = new FormData(this);
   const extras = form.getAll('extra');
-  const lines = [
+
+  const message = [
     'Заявка — ЖК «Стремление к Свету»',
     '',
     'Имя: ' + form.get('name'),
@@ -383,11 +306,16 @@ document.getElementById('requestForm').addEventListener('submit', function(e) {
     'Устройство: ' + form.get('device'),
     'Дополнительные услуги: ' + (extras.length ? extras.join(', ') : 'Не выбраны'),
     'Комментарий: ' + (form.get('comment') || 'Нет')
-  ];
+  ].join('\n');
 
-  const message = lines.join('\n');
-  const url = 'https://wa.me/79771198417?text=' + encodeURIComponent(message);
-  window.open(url, '_blank', 'noopener');
+  const encoded = encodeURIComponent(message);
+  const method = document.getElementById('sendMethod').value;
+
+  if (method === 'sms') {
+    window.location.href = 'sms:+79777175043?body=' + encoded;
+  } else {
+    window.location.href = 'https://wa.me/79777175043?text=' + encoded;
+  }
 });
 </script>
 </body>
